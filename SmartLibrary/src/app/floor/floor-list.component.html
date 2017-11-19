@@ -1,0 +1,15 @@
+<md-toolbar color="primary">
+  <md-icon class="example-icon">account_balance</md-icon>
+  <span>智能图书座位管理系统</span>
+</md-toolbar>
+
+<md-card *ngFor="let floor of floors">
+  <md-card-title>{{floor.name}}</md-card-title>
+  <md-chip-list>
+    <md-chip *ngFor="let seat of floor.id; let i=index" [selected]="floor.hash[i] ? 'true':'false'" color="accent">{{seat}}</md-chip>
+    <!--<md-progress-spinner class="example-margin" color="primary" mode="determinate" [value]="value">
+    </md-progress-spinner>-->
+  </md-chip-list>
+</md-card>
+
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
