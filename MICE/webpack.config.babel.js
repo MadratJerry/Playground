@@ -1,6 +1,7 @@
 import path from 'path'
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
 const CLIENT_PATH = path.resolve(process.cwd(), './')
 
@@ -47,6 +48,10 @@ export default {
             },
           },
           {
+            test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+            loader: 'url-loader?limit=100000',
+          },
+          {
             test: /\.(js|jsx)$/,
             loader: 'babel-loader',
             include: CLIENT_PATH,
@@ -57,18 +62,20 @@ export default {
           },
           {
             test: /\.css$/,
-            use: [
-              'style-loader',
-              {
-                loader: 'css-loader',
-                options: {
-                  importLoaders: 1,
-                  modules: true,
-                  sourceMap: true,
-                  camelCase: true,
+            use: ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: [
+                {
+                  loader: 'css-loader',
+                  options: {
+                    importLoaders: 1,
+                    modules: true,
+                    sourceMap: true,
+                    camelCase: true,
+                  },
                 },
-              },
-            ],
+              ],
+            }),
           },
           {
             test: /\.less$/,
@@ -81,6 +88,7 @@ export default {
               },
             ],
           },
+
           {
             exclude: [/\.js$/, /\.html$/, /\.json$/],
             loader: 'file-loader',
@@ -100,6 +108,7 @@ export default {
     new webpack.EnvironmentPlugin({
       NODE_ENV: process.env.NODE_ENV,
     }),
+    new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(CLIENT_PATH, 'public/index.html'),
