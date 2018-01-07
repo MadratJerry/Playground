@@ -72,7 +72,14 @@ export default {
           },
           {
             test: /\.less$/,
-            loader: ['style-loader', 'css-loader', 'less-loader'],
+            use: [
+              'style-loader',
+              'css-loader',
+              {
+                loader: 'less-loader',
+                options: { modifyVars: { 'primary-color': 'black' } },
+              },
+            ],
           },
           {
             exclude: [/\.js$/, /\.html$/, /\.json$/],
@@ -101,6 +108,7 @@ export default {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
+    hot: true,
     port: 3000,
   },
 }
