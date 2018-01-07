@@ -1,0 +1,7 @@
+.glyph::before {
+  font-family: 'OneNikeGlyphs';
+}
+
+.logo::before {
+  content: '\f139';
+}
