@@ -72,6 +72,7 @@ export default {
                     modules: true,
                     sourceMap: true,
                     camelCase: true,
+                    localIdentName: '[path][name]__[local]--[hash:base64:8]',
                   },
                 },
               ],
