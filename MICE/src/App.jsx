@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Layout } from 'antd'
 import Nav from '@/components/Nav'
+import Main from '@/components/Main'
 
 const { Header, Content, Footer } = Layout
 
@@ -15,6 +16,7 @@ class App extends React.Component {
               position: 'fixed',
               width: '100%',
               height: 'auto',
+              zIndex: 999,
               backgroundColor: '#fff',
               padding: 0,
             }}
@@ -22,7 +24,6 @@ class App extends React.Component {
             <Nav />
           </Header>
           <Content style={{ marginTop: 111 }}>
-            content
             <Switch>
               <Route path="/" component={Main} />
             </Switch>
@@ -32,10 +33,6 @@ class App extends React.Component {
       </Router>
     )
   }
-}
-
-function Main() {
-  return null
 }
 
 export default App
