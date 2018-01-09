@@ -7,7 +7,11 @@ class Glyph extends React.Component {
     return (
       <span
         className={`${styles.glyph} ${styles[props.type]}`}
-        style={{ fontSize: props.size + 'px', color: props.color }}
+        style={{
+          fontSize: props.size + 'px',
+          color: props.color,
+          ...props.style,
+        }}
       />
     )
   }

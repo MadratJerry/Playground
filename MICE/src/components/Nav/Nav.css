@@ -1,9 +1,12 @@
+.top-nav,
+.bottom-nav {
+  min-width: 768px;
+}
+
 .top-nav {
   display: flex;
   justify-content: space-between;
   align-content: center;
-  height: 39px;
-  line-height: 39px;
   border-bottom: 1px solid #e5e5e5;
 }
 

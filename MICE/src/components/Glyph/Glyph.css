@@ -39,3 +39,7 @@
 .chat::before {
   content: '\f121';
 }
+
+.converse::before {
+  content: '\f15b';
+}

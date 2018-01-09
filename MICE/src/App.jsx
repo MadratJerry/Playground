@@ -10,12 +10,13 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <Layout>
+        <Layout style={{ minWidth: '900px' }}>
           <Header
             style={{
               position: 'fixed',
               width: '100%',
               height: 'auto',
+              overflow: 'scroll',
               zIndex: 999,
               backgroundColor: '#fff',
               padding: 0,
@@ -23,7 +24,7 @@ class App extends React.Component {
           >
             <Nav />
           </Header>
-          <Content style={{ marginTop: 111 }}>
+          <Content style={{ marginTop: Nav.height }}>
             <Switch>
               <Route path="/" component={Main} />
             </Switch>
