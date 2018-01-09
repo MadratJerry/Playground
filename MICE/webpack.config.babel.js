@@ -3,6 +3,9 @@ import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 
+const commonExtractCss = new ExtractTextPlugin('common.css'),
+  projectExtractCss = new ExtractTextPlugin('app.css')
+
 const CLIENT_PATH = path.resolve(process.cwd(), './')
 
 export default {
@@ -62,7 +65,7 @@ export default {
           },
           {
             test: /\.css$/,
-            use: ExtractTextPlugin.extract({
+            use: projectExtractCss.extract({
               fallback: 'style-loader',
               use: [
                 {
@@ -80,16 +83,17 @@ export default {
           },
           {
             test: /\.less$/,
-            use: [
-              'style-loader',
-              'css-loader',
-              {
-                loader: 'less-loader',
-                options: { modifyVars: { 'primary-color': 'black' } },
-              },
-            ],
+            use: commonExtractCss.extract({
+              fallback: 'style-loader',
+              use: [
+                'css-loader',
+                {
+                  loader: 'less-loader',
+                  options: { modifyVars: { 'primary-color': 'black' } },
+                },
+              ],
+            }),
           },
-
           {
             exclude: [/\.js$/, /\.html$/, /\.json$/],
             loader: 'file-loader',
@@ -109,7 +113,8 @@ export default {
     new webpack.EnvironmentPlugin({
       NODE_ENV: process.env.NODE_ENV,
     }),
-    new ExtractTextPlugin('styles.css'),
+    commonExtractCss,
+    projectExtractCss,
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(CLIENT_PATH, 'public/index.html'),
