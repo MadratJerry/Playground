@@ -1,7 +1,8 @@
 import React from 'react'
-import { AutoComplete, Input, Icon, Menu } from 'antd'
+import { AutoComplete, Input, Icon, Menu, Modal } from 'antd'
 import { Link } from 'react-router-dom'
 import Glyph from '@/components/Glyph'
+import Login from '@/components/Login'
 import styles from './Nav.css'
 
 const Option = AutoComplete.Option
@@ -45,6 +46,7 @@ function renderOption(item) {
 
 class Nav extends React.Component {
   state = {
+    modalVisible: false,
     dataSource: [],
   }
 
@@ -54,10 +56,24 @@ class Nav extends React.Component {
     })
   }
 
+  handleClick = params => {
+    this.setState({ modalVisible: true })
+  }
+
   render() {
     const { dataSource } = this.state
     return (
       <React.Fragment>
+        <Modal
+          title={null}
+          wrapClassName="vertical-center-modal"
+          visible={this.state.modalVisible}
+          onOk={() => this.setState({ modalVisible: false })}
+          onCancel={() => this.setState({ modalVisible: false })}
+          footer={null}
+        >
+          <Login />
+        </Modal>
         <nav
           className={styles.topNav}
           style={{
@@ -85,7 +101,13 @@ class Nav extends React.Component {
           <div className={styles.rightSide}>
             <ul className={styles.list}>
               <li>
-                <Link to="/">加入/登录Nike+账号</Link>
+                <a>
+                  <Icon
+                    type="user"
+                    style={{ fontSize: 14 }}
+                    onClick={this.handleClick}
+                  />
+                </a>
               </li>
               <li>
                 <Link to="/">
