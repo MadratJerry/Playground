@@ -133,6 +133,7 @@ class Nav extends React.Component {
             onClick={this.handleClick}
             selectedKeys={[this.state.current]}
             mode="horizontal"
+            style={{ border: 'none' }}
           >
             <SubMenu title={<Link to="/">男子</Link>}>
               <SubMenu title={<Link to="/">鞋类</Link>}>

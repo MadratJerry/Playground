@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'antd'
+import { Link } from 'react-router-dom'
 import styles from './Main.css'
 import i1 from '~/assets/images/0109_SP18_HP_P1_CNY.jpg'
 import i2 from '~/assets/images/0104_SP18_HP_P2_HUARACHE.jpg'
@@ -19,7 +20,9 @@ class Main extends React.Component {
               className={styles.mask}
               style={{ right: '10%', bottom: '20%' }}
             >
-              <Button style={{ marginRight: 10 }}>立即选购</Button>
+              <Button style={{ marginRight: 10 }}>
+                <Link to="/good">立即选购</Link>
+              </Button>
               <Button>了解更多</Button>
             </div>
           </div>

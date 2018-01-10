@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "image":
+        "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=943807_401&$img1=943807_002",
+      "name": "Kyrie 4 EP",
+      "gender": "男子",
+      "kind": "篮球鞋",
+      "code": ["943807-002", "943807-401"],
+      "price": 899
+    },
+    {
+      "image":
+        "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=AA2898_002",
+      "name": "Kyrie 4 EP(PS)",
+      "gender": "幼童",
+      "kind": "运动童鞋",
+      "code": ["AA2898-002"],
+      "price": 599
+    },
+    {
+      "image":
+        "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=AJ1976_100&$img1=AJ1976_050",
+      "name": "Nike Dri-FIT Kyrie",
+      "gender": "男子",
+      "kind": "长袖篮球T恤",
+      "code": ["AJ1976-050"],
+      "price": 299
+    },
+    {
+      "image":
+        "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=890656_060&$img1=890656_722",
+      "name": "Nike Dri-FIT Therma Kyrie",
+      "gender": "男子",
+      "kind": "印花篮球长裤",
+      "code": ["890656-060", "890656-722"],
+      "price": 599
+    }
+  ]
+}

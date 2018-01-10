@@ -29,7 +29,7 @@ class Login extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form
     return (
-      <Tabs defaultActiveKey="2" className={styles.tab}>
+      <Tabs defaultActiveKey="1" className={styles.tab}>
         <TabPane tab="登录" key="1" className={styles.tabPane}>
           <img src={nike} alt="" />
           <br />

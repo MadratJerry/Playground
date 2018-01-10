@@ -1,8 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { Layout } from 'antd'
 import Nav from '@/components/Nav'
 import Main from '@/components/Main'
+import Good from '@/components/Good'
 
 const { Header, Content, Footer } = Layout
 
@@ -26,7 +27,8 @@ class App extends React.Component {
           </Header>
           <Content style={{ marginTop: Nav.height }}>
             <Switch>
-              <Route path="/" component={Main} />
+              <Route exact path="/" component={Main} />
+              <Route exact path="/good" component={Good} />
             </Switch>
           </Content>
           <Footer style={{ textAlign: 'center' }}>© 2017 Nike, Inc.</Footer>
