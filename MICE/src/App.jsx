@@ -29,6 +29,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={Main} />
               <Route exact path="/good" component={Good} />
+              <Route exact path="/good/:code" component={Good.Detail} />
             </Switch>
           </Content>
           <Footer style={{ textAlign: 'center' }}>© 2017 Nike, Inc.</Footer>

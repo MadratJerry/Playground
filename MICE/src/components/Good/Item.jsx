@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, Icon } from 'antd'
+import { Link } from 'react-router-dom'
+import { Card, Icon, Popover } from 'antd'
 
 const { Meta } = Card
 
@@ -8,7 +9,35 @@ class Item extends React.Component {
     const { image, name, kind, price, gender, code } = this.props
     return (
       <Card
-        cover={<img alt={name} src={image} style={{ width: '300%' }} />}
+        cover={
+          <Popover
+            content={code.map((e, index) => {
+              return (
+                <div
+                  style={{
+                    width: '100px',
+                    overflow: 'hidden',
+                    display: 'inline-block',
+                  }}
+                >
+                  <img
+                    src={image}
+                    alt=""
+                    style={{
+                      width: '300%',
+                      marginLeft: `-${index * 100}%`,
+                    }}
+                  />
+                </div>
+              )
+            })}
+            placement="bottom"
+          >
+            <Link to={`good/${code[0]}`}>
+              <img alt={name} src={image} style={{ width: '300%' }} />
+            </Link>
+          </Popover>
+        }
         actions={[
           <Icon type="heart-o" />,
           <Icon type="shopping-cart" />,
