@@ -5,7 +5,7 @@ import Login from './Login'
 import Register from './Register'
 import styles from './Login.css'
 import Item from '@/components/Good/Item'
-import { data } from '@/components/Good/Good.json'
+import { data } from '@/components/Good/GoodData'
 
 const TabPane = Tabs.TabPane
 const FormItem = Form.Item
@@ -25,15 +25,8 @@ class Profile extends React.Component {
     })
   }
   showGoods() {
-    const f = data
-    let result = []
-    for (let i = 0, len = f.length; i < len; i += 4)
-      result.push(f.slice(i, i + 4))
-    return result.map((e, i) => (
-      <div style={{ display: 'flex', justifyContent: 'space-between' }} key={i}>
-        {e.map((e, i) => <Item key={i} {...e} />)}
-      </div>
-    ))
+    let result = data
+    return result.map((e, i) => <Item key={i} {...e} />)
   }
 
   handleSubmit = e => {
@@ -49,7 +42,11 @@ class Profile extends React.Component {
     const { getFieldDecorator } = this.props.form
     return this.state.isAuth ? (
       <Tabs defaultActiveKey="0" className={styles.tab}>
-        <TabPane tab="我的信息" key="0">
+        <TabPane
+          tab="我的信息"
+          key="0"
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
           <Card
             style={{ width: 300 }}
             cover={

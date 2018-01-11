@@ -1,6 +1,6 @@
 import React from 'react'
 import { Menu } from 'antd'
-import { data } from './Good.json'
+import { data } from './GoodData'
 import Item from './Item'
 
 const MenuItemGroup = Menu.ItemGroup

@@ -22,7 +22,7 @@ export default {
     chunkFilename: 'assets/js/[name].chunk.js',
   },
   resolve: {
-    extensions: ['.js', '.json', '.jsx'],
+    extensions: ['.jsx', '.js', '.json'],
     alias: {
       '@': path.resolve(CLIENT_PATH, './src'),
       '~': path.resolve(CLIENT_PATH, './'),

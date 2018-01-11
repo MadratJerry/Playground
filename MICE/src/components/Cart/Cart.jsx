@@ -2,7 +2,7 @@ import React from 'react'
 import { Divider, Card, List, Icon, Avatar, message, Button } from 'antd'
 import { Link } from 'react-router-dom'
 import CartModel from './CartModel'
-import { data, codes } from '@/components/Good/Good.json'
+import { data, codes } from '@/components/Good/GoodData'
 import './Cart.css'
 
 class Cart extends React.Component {

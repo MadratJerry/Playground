@@ -29,9 +29,8 @@ class App extends React.Component {
           <Content style={{ marginTop: Nav.height }}>
             <Switch>
               <Route exact path="/" component={Main} />
-              <Route exact path="/" component={Main} />
-              <Route exact path="/cart" component={Cart} />
               <Route exact path="/good" component={Good} />
+              <Route exact path="/cart" component={Cart} />
               <Route exact path="/good/:code" component={Good.Detail} />
             </Switch>
           </Content>

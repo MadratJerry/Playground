@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Radio, Button, Icon, Rate, Form, message } from 'antd'
-import { data, codes } from './Good.json'
+import { data, codes } from './GoodData'
 import CartModel from '../Cart/CartModel'
 
 const RadioButton = Radio.Button
