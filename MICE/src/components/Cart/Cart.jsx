@@ -1,5 +1,14 @@
 import React from 'react'
-import { Divider, Card, List, Icon, Avatar, message, Button } from 'antd'
+import {
+  Divider,
+  Card,
+  List,
+  Icon,
+  Avatar,
+  message,
+  Button,
+  InputNumber,
+} from 'antd'
 import { Link } from 'react-router-dom'
 import CartModel from './CartModel'
 import { data, codes } from '@/components/Good/GoodData'
@@ -12,6 +21,7 @@ class Cart extends React.Component {
         let info = data[codes[e.code].source]
         return {
           num: info.code.indexOf(e.code),
+          count: 1,
           href: `good/${e.code}`,
           price: info.price,
           title: info.name,
@@ -95,7 +105,7 @@ class Cart extends React.Component {
                       >
                         <Link to={item.href}>{item.title}</Link>
                         <span style={{ color: 'orange', fontSize: 12 }}>
-                          ￥{item.price}
+                          ￥{item.price * item.count}
                         </span>
                       </div>
                     }
@@ -105,6 +115,15 @@ class Cart extends React.Component {
                     <div>
                       <p>颜色：{item.color.join('/')}</p>
                       <p>尺码：{item.size}</p>
+                      <InputNumber
+                        min={1}
+                        value={item.count}
+                        onChange={v => {
+                          const listData = this.state.listData
+                          listData[index].count = v
+                          this.setState({ listData })
+                        }}
+                      />
                     </div>
                   }
                 </List.Item>
@@ -116,10 +135,12 @@ class Cart extends React.Component {
         <div style={{ width: '30%', position: 'fixed', right: 0 }}>
           <Card title="小结">
             订单总计: ￥{this.state.listData.reduce((sum, i) => {
-              sum += i.price
+              sum += i.price * i.count
               return sum
             }, 0)}
-            <Button>结算</Button>
+            <Button>
+              <Link to="/pay">结算</Link>
+            </Button>
           </Card>
         </div>
       </div>

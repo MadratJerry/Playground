@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'antd'
+import { Button, Carousel } from 'antd'
 import { Link } from 'react-router-dom'
 import styles from './Main.css'
 import i1 from '~/assets/images/0109_SP18_HP_P1_CNY.jpg'
@@ -13,6 +13,24 @@ class Main extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <Carousel autoplay>
+          <img
+            src="https://content.nike.com/content/dam/one-nike/zh-cn/season-2018-sp/AJ/0104/SLP/0104_SP18_AJ_P5.jpg.transform/full-screen/0104_SP18_AJ_P5.jpg"
+            alt=""
+          />
+          <img
+            src="https://content.nike.com/content/dam/one-nike/zh-cn/season-2018-sp/AJ/0109/0109_SP18_AJ_P7_GEAR-UP.jpg.transform/full-screen/0109_SP18_AJ_P7_GEAR-UP.jpg"
+            alt=""
+          />
+          <img
+            src="https://content.nike.com/content/dam/one-nike/zh-cn/season-2018-sp/AJ/0109/0109_SP18_AJ_P4.jpg.transform/full-screen/0109_SP18_AJ_P4.jpg"
+            alt=""
+          />
+          <img
+            src="https://content.nike.com/content/dam/one-nike/zh-cn/season-2018-sp/AJ/0109/0109_SP18_AJ_P3.jpg.transform/full-screen/0109_SP18_AJ_P3.jpg"
+            alt=""
+          />
+        </Carousel>
         <div className={styles.content}>
           <div className={styles.image}>
             <img src={i1} alt="" />

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Radio, Button, Icon, Rate, Form, message } from 'antd'
+import ReactImageZoom from 'react-image-zoom'
 import { data, codes } from './GoodData'
 import CartModel from '../Cart/CartModel'
 
@@ -37,7 +38,13 @@ class Detail extends React.Component {
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <div style={{ width: '70%' }}>
             {detail.images.map((e, index) => (
-              <img src={e} key={index} alt="" width="100%" />
+              <ReactImageZoom
+                width={400}
+                height={400}
+                zoomWidth={500}
+                img={e}
+              />
+              // <img src={e} key={index} alt="" width="100%" />
             ))}
           </div>
           <div style={{ width: '30%', position: 'fixed', right: 0 }}>
