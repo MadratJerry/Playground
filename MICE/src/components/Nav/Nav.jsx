@@ -2,7 +2,7 @@ import React from 'react'
 import { AutoComplete, Input, Icon, Menu, Modal } from 'antd'
 import { Link } from 'react-router-dom'
 import Glyph from '@/components/Glyph'
-import Login from '@/components/Login'
+import Profile from '@/components/Profile'
 import styles from './Nav.css'
 
 const Option = AutoComplete.Option
@@ -72,7 +72,7 @@ class Nav extends React.Component {
           onCancel={() => this.setState({ modalVisible: false })}
           footer={null}
         >
-          <Login />
+          <Profile close={() => this.setState({ modalVisible: false })} />
         </Modal>
         <nav
           className={styles.topNav}
@@ -135,25 +135,25 @@ class Nav extends React.Component {
             mode="horizontal"
             style={{ border: 'none' }}
           >
-            <SubMenu title={<Link to="/">男子</Link>}>
-              <SubMenu title={<Link to="/">鞋类</Link>}>
+            <SubMenu title={<Link to="/good">男子</Link>}>
+              <SubMenu title={<Link to="/good">鞋类</Link>}>
                 <Menu.Item key="setting:1">
-                  <Link to="/">休闲</Link>
+                  <Link to="/good">休闲</Link>
                 </Menu.Item>
                 <Menu.Item key="setting:2">
-                  <Link to="/">跑步</Link>
+                  <Link to="/good">跑步</Link>
                 </Menu.Item>
               </SubMenu>
-              <SubMenu title={<Link to="/">服装</Link>}>
+              <SubMenu title={<Link to="/good">服装</Link>}>
                 <Menu.Item key="setting:1">
-                  <Link to="/">紧身运动服</Link>
+                  <Link to="/good">紧身运动服</Link>
                 </Menu.Item>
                 <Menu.Item key="setting:1">
-                  <Link to="/">连帽衫/套头衫</Link>
+                  <Link to="/good">连帽衫/套头衫</Link>
                 </Menu.Item>
               </SubMenu>
             </SubMenu>
-            <SubMenu title={<Link to="/">女子</Link>}>
+            <SubMenu title={<Link to="/good">女子</Link>}>
               <MenuItemGroup title="Item 1">
                 <Menu.Item key="setting:1">Option 1</Menu.Item>
                 <Menu.Item key="setting:2">Option 2</Menu.Item>
@@ -163,19 +163,19 @@ class Nav extends React.Component {
                 <Menu.Item key="setting:4">Option 4</Menu.Item>
               </MenuItemGroup>
             </SubMenu>
-            <SubMenu title={<Link to="/">男孩</Link>}>
+            <SubMenu title={<Link to="/good">男孩</Link>}>
               <MenuItemGroup title="Item 1">
                 <Menu.Item key="setting:1">Option 1</Menu.Item>
                 <Menu.Item key="setting:2">Option 2</Menu.Item>
               </MenuItemGroup>
             </SubMenu>
-            <SubMenu title={<Link to="/">女孩</Link>}>
+            <SubMenu title={<Link to="/good">女孩</Link>}>
               <MenuItemGroup title="Item 1">
                 <Menu.Item key="setting:1">Option 1</Menu.Item>
                 <Menu.Item key="setting:2">Option 2</Menu.Item>
               </MenuItemGroup>
             </SubMenu>
-            <SubMenu title={<Link to="/">NIKEiD专属定制</Link>}>
+            <SubMenu title={<Link to="/good">NIKEiD专属定制</Link>}>
               <MenuItemGroup title="Item 1">
                 <Menu.Item key="setting:1">Option 1</Menu.Item>
                 <Menu.Item key="setting:2">Option 2</Menu.Item>
