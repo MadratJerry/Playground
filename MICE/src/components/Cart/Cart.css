@@ -1,0 +1,11 @@
+:global(.ant-list-item-extra-wrap) {
+  flex-direction: row-reverse;
+}
+
+:global(.ant-list-item-extra.ant-list-item-extra) {
+  margin-left: 0;
+}
+
+:global(.ant-list-item-main.ant-list-item-main) {
+  margin-left: 10px;
+}

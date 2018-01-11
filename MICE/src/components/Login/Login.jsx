@@ -22,7 +22,7 @@ class Login extends React.Component {
     e.preventDefault()
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values)
+        // console.log('Received values of form: ', values)
       }
     })
   }
@@ -34,7 +34,7 @@ class Login extends React.Component {
           <img src={nike} alt="" />
           <br />
           <h1>登录NIKE+账号</h1>
-          <Form onSubmit={this.handleSubmit} className="login-form">
+          <Form onSubmit={this.handleSubmit}>
             <FormItem>
               {getFieldDecorator('userName', {
                 rules: [

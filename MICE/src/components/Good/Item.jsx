@@ -14,6 +14,7 @@ class Item extends React.Component {
             content={code.map((e, index) => {
               return (
                 <div
+                  key={index}
                   style={{
                     width: '100px',
                     overflow: 'hidden',
@@ -40,7 +41,9 @@ class Item extends React.Component {
         }
         actions={[
           <Icon type="heart-o" />,
-          <Icon type="shopping-cart" />,
+          <Link to={`good/${code[0]}`}>
+            <Icon type="shopping-cart" />
+          </Link>,
           <Icon type="upload" />,
         ]}
         style={{ margin: 4, overflow: 'hidden' }}

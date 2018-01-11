@@ -1,10 +1,8 @@
 import React from 'react'
 import { Menu } from 'antd'
-import { Route } from 'react-router-dom'
-
 import { data } from './Good.json'
-
 import Item from './Item'
+
 const MenuItemGroup = Menu.ItemGroup
 
 class Good extends React.Component {
@@ -24,8 +22,8 @@ class Good extends React.Component {
     let result = []
     for (let i = 0, len = f.length; i < len; i += 4)
       result.push(f.slice(i, i + 4))
-    return result.map(e => (
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    return result.map((e, i) => (
+      <div style={{ display: 'flex', justifyContent: 'space-between' }} key={i}>
         {e.map((e, i) => <Item key={i} {...e} />)}
       </div>
     ))

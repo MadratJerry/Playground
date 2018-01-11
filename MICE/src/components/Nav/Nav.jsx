@@ -115,7 +115,7 @@ class Nav extends React.Component {
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/cart">
                   <Glyph type="cart" size="21" />
                 </Link>
               </li>
