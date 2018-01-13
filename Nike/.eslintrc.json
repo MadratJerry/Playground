@@ -1,0 +1,23 @@
+{
+  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+  "plugins": ["prettier", "jsx-a11y"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalDecorators": true,
+      "jsx": true
+    },
+    "sourceType": "module",
+    "ecmaVersion": 8
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "no-console": "warn",
+    "no-cond-assign": "off"
+  }
+}

@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'OneNikeGlyphs';
+  src: url('~/assets/fonts/OneNikeGlyphs.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'TradeGothicW01-BoldCn20';
+  src: url('~/assets/fonts/Trade Gothic W01 Bold Cn 20.woff') format('woff');
+}

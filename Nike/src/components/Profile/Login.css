@@ -1,0 +1,25 @@
+.tab :global(.ant-tabs-bar) {
+  display: flex;
+  justify-content: center;
+}
+
+.tab :global(.ant-form-item) {
+  display: flex;
+  justify-content: center;
+}
+
+.tab :global(.ant-form-item-control) {
+  width: 300px;
+}
+
+.tab-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.tab-pane img {
+  width: 43px;
+}

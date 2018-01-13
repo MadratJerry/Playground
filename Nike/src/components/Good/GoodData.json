@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "image":
+        "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=943807_401&$img1=943807_002",
+      "name": "Kyrie 4 EP",
+      "gender": "男子",
+      "kind": "篮球鞋",
+      "code": ["943807-401", "943807-002"],
+      "price": 899
+    },
+    {
+      "image":
+        "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=AA2898_002",
+      "name": "Kyrie 4 EP(PS)",
+      "gender": "幼童",
+      "kind": "运动童鞋",
+      "code": ["AA2898-002"],
+      "price": 599
+    },
+    {
+      "image":
+        "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=AJ1976_100&$img1=AJ1976_050",
+      "name": "Nike Dri-FIT Kyrie",
+      "gender": "男子",
+      "kind": "长袖篮球T恤",
+      "code": ["AJ1976-050"],
+      "price": 299
+    },
+    {
+      "image":
+        "https://images.nike.com/is/image/DotCom/pwp_sheet2?$NIKE_PWPx3$&$img0=890656_060&$img1=890656_722",
+      "name": "Nike Dri-FIT Therma Kyrie",
+      "gender": "男子",
+      "kind": "印花篮球长裤",
+      "code": ["890656-060", "890656-722"],
+      "price": 599
+    }
+  ],
+  "codes": {
+    "943807-002": {
+      "source": 0,
+      "images": [
+        "https://c.static-nike.com/a/images/t_PDP_936_v1/f_auto/ia5pz6jozj2g7d6diup6/kyrie-4-ep-%E7%94%B7%E5%AD%90%E7%AF%AE%E7%90%83%E9%9E%8B-1l1wok.jpg",
+        "https://c.static-nike.com/a/images/t_PDP_936_v1/f_auto/fpqay5sdqesr6na3bexb/kyrie-4-ep-%E7%94%B7%E5%AD%90%E7%AF%AE%E7%90%83%E9%9E%8B-1l1wok.jpg",
+        "https://c.static-nike.com/a/images/t_PDP_936_v1/f_auto/zlode1wj2tj2gjutup38/kyrie-4-ep-%E7%94%B7%E5%AD%90%E7%AF%AE%E7%90%83%E9%9E%8B-1l1wok.jpg"
+      ],
+      "size": [
+        "40",
+        "40.5",
+        "41",
+        "42",
+        "42.5",
+        "43",
+        "44",
+        "44.5",
+        "45",
+        "46",
+        "47.5"
+      ],
+      "description":
+        "Kyrie 4 EP 男子篮球鞋集柔韧灵活、回弹缓震和支撑优势于一体。该鞋款专为实现凯里·欧文的突然转向而打造，塑就快速流畅的赛场风范。",
+      "color": ["黑", "煤黑", "浅赛车蓝", "白色"],
+      "rate": 4
+    },
+    "943807-401": {
+      "source": 0,
+      "images": [
+        "https://c.static-nike.com/a/images/t_PDP_936_v1/f_auto/nnyah1arebnph8yd6f6w/kyrie-4-ep-%E7%94%B7%E5%AD%90%E7%AF%AE%E7%90%83%E9%9E%8B-1l1wok.jpg",
+        "https://c.static-nike.com/a/images/t_PDP_936_v1/f_auto/fnjiznwppdrxomv6vws5/kyrie-4-ep-%E7%94%B7%E5%AD%90%E7%AF%AE%E7%90%83%E9%9E%8B-1l1wok.jpg",
+        "https://c.static-nike.com/a/images/t_PDP_936_v1/f_auto/c3ubiky2iapboy9ik7mq/kyrie-4-ep-%E7%94%B7%E5%AD%90%E7%AF%AE%E7%90%83%E9%9E%8B-1l1wok.jpg"
+      ],
+      "size": [
+        "40",
+        "40.5",
+        "41",
+        "42",
+        "42.5",
+        "43",
+        "44",
+        "44.5",
+        "45",
+        "46",
+        "47.5"
+      ],
+      "description":
+        "Kyrie 4 EP 男子篮球鞋集柔韧灵活、回弹缓震和支撑优势于一体。该鞋款专为实现凯里·欧文的突然转向而打造，塑就快速流畅的赛场风范。",
+      "color": ["黑", "煤黑", "浅赛车蓝", "白色"],
+      "rate": 4
+    }
+  }
+}
