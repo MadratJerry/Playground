@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         重庆理工大学课程表导出
 // @namespace    https://github.com/crazymousethief
-// @version      0.0.1
+// @version      0.0.2
 // @description  导出重庆理工大学课程表
 // @author       crazymousethief
 // @match        *://jwxt.i.cqut.edu.cn/*/xs_main.aspx*
@@ -289,7 +289,7 @@ animation: bottomBubbles ease-in-out 0.75s forwards;
             const week = item.cellIndex - (match ? 0 : 1);
             item.className = "lesson";
             item.innerHTML
-              .split("<br>\n")
+              .split("<br><br>")
               .forEach(item =>
                 cur.push(`周${week}第${section}-${section + 1}节\n${item}`)
               );
